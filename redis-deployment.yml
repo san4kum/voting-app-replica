@@ -8,16 +8,16 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: redis-pod
+      app: demo-voting-app
   template:
      metadata:
-       name: redis-pod
+       name: redis-app-pod
        labels:
-         name: redis-pod
-         apps: demo-voting-app
+         name: redis-app-pod
+         app: demo-voting-app
      spec:
          containers:
-           - name: redis
+           - name: redis-app-pod
              image: redis
              ports:
              - containerPort: 6379
